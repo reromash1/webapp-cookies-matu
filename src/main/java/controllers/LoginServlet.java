@@ -35,7 +35,7 @@ public class LoginServlet extends HttpServlet {
         //Creamos el nuevo objeto de la cookie
         LoginService auth = new LoginServiceImplement();
         Optional<String> cookieOptional = auth.getUsername(req);
-        ''
+
         if (cookieOptional.isPresent()) {
             resp.setContentType("text/html;charset=UTF-8");
             try(PrintWriter out = resp.getWriter()) {
